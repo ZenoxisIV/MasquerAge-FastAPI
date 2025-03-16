@@ -1,7 +1,7 @@
 [project]
-name = "mosip-sdk-api"
+name = "MasquerAge-FastAPI"
 version = "0.1.0"
-description = "Add your description here"
+description = "Python backend API for the MOSIP ID Authentication SDK"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [

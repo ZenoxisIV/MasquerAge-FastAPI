@@ -1,38 +1,12 @@
-# sv
+# This is a FastAPI-based backend designed to take advantage of the MOSIP ID Authentication SDK
 
-Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
+## Requirements:
+- `uv` as a Python package manager
+- `keystore_sign.p12`, `keystore.p12`, `mosip_signed.pem`, and `ida_partner.pem` placed in a `env` folder under the project root
+- `config.toml` properly configured, with path names set relative to the project root (or specifically, `auth.py`)
 
-## Creating a project
+## To run:
 
-If you're seeing this, you've probably already done this step. Congrats!
+In order to run this project, execute `uv sync`, then use `uv run fastapi dev ./main.py --port [PORT]` to run the webserver and export it to port `PORT`. 
 
-```bash
-# create a new project in the current directory
-npx sv create
-
-# create a new project in my-app
-npx sv create my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+You may refer to the endpoint `localhost:PORT/docs` for the API docs.

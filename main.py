@@ -23,25 +23,12 @@ server.add_middleware(
 class DemographicRequestData(BaseModel):
     uin: str
 
-
-class AgeRequest(DemographicRequestData):
-    age: int
-
-
 class DobRequest(DemographicRequestData):
     dob: str
 
-
 @server.get("/")
 async def root():
-    return {"message": "Hello, world!"}
-
-
-@server.post("/age/")
-async def age(age_data: AgeRequest):
-    demo_data = DemographicsModel(age=str(age_data.age))
-    auth_response = auth.yesno(age_data.uin, demo_data)
-    return {"authStatus": auth_response}
+    return {"message": "Hello, MOSIP!"}
 
 
 @server.post("/dob/")
