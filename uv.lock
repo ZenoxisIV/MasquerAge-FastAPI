@@ -327,6 +327,23 @@ wheels = [
 ]
 
 [[package]]
+name = "masquerage-fastapi"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "dynaconf" },
+    { name = "fastapi", extra = ["standard"] },
+    { name = "mosip-auth-sdk" },
+]
+
+[package.metadata]
+requires-dist = [
+    { name = "dynaconf", specifier = ">=3.2.7" },
+    { name = "fastapi", extras = ["standard"], specifier = ">=0.115.7" },
+    { name = "mosip-auth-sdk", git = "https://github.com/mosip/ida-auth-sdk.git?rev=release-0.9.x" },
+]
+
+[[package]]
 name = "mdurl"
 version = "0.1.2"
 source = { registry = "https://pypi.org/simple" }
@@ -344,23 +361,6 @@ dependencies = [
     { name = "jwcrypto" },
     { name = "pydantic" },
     { name = "requests" },
-]
-
-[[package]]
-name = "mosip-sdk-api"
-version = "0.1.0"
-source = { virtual = "." }
-dependencies = [
-    { name = "dynaconf" },
-    { name = "fastapi", extra = ["standard"] },
-    { name = "mosip-auth-sdk" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "dynaconf", specifier = ">=3.2.7" },
-    { name = "fastapi", extras = ["standard"], specifier = ">=0.115.7" },
-    { name = "mosip-auth-sdk", git = "https://github.com/mosip/ida-auth-sdk.git?rev=release-0.9.x" },
 ]
 
 [[package]]
